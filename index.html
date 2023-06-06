@@ -20,7 +20,8 @@
                 <li v-for="(item, index) in toDoList" class="ivy_todoitem">
                     <p :class="toDoList[index].done ? 'done' : ''"> {{ toDoList[index].toDo }}</p>
                     <div class="ivy_command_box">
-                        <i class="fa-solid fa-check"></i>
+                        <i v-if="toDoList[index].done" class="fa-solid fa-check" @click="doneUndone(index)"></i>
+                        <i v-else class="fa-solid fa-clipboard-check" @click="doneUndone(index)"></i>
                         <i class="fa-regular fa-trash-can" @click="deleteItem(index)"></i>
                     </div>
                 </li>

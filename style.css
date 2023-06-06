@@ -61,7 +61,15 @@ body{
     margin-right: 1rem;
 }
 
-.ivy_todoitem .fa-check:hover{
+.ivy_todoitem .fa-clipboard-check{
+    color: grey;
+    cursor: pointer;
+    transition: all 0.13s ease-in-out;
+    margin-right: 1rem;
+}
+
+.ivy_todoitem .fa-check:hover,
+.ivy_todoitem .fa-clipboard-check:hover{
     color: rgb(26, 255, 0);
 }
 
