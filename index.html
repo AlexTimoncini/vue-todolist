@@ -12,7 +12,17 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-
+        <header class="ivy_header">
+            <nav class="ivy_navbar"></nav>
+        </header>
+        <main class="ivy_main">
+            <ul class="ivy_todolist">
+                <li v-for="(item, index) in toDoList" class="ivy_todoitem">
+                    <p :class="toDoList[index].done ? 'done' : ''"> {{ toDoList[index].toDo }}</p>
+                </li>
+            </ul>
+        </main>
+        
     </div>
     <script src="script.js"></script>
 </body>
