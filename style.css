@@ -6,23 +6,30 @@ padding: 0;
 box-sizing: border-box;
 }
 
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .ivy_navbar{
     background-color: rgb(246, 194, 134);
     height: 120px;
 }
 
 .ivy_main{
-    height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
     background-color: antiquewhite;
     display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+    padding: 2rem;
 }
 
 .ivy_todolist{
-    margin: 2rem auto;
     list-style: none;
     border: 3px solid black;
     width: 60%;
     border-radius: 2rem;
+    height: 100%;
 }
 
 .ivy_todoitem{
@@ -33,13 +40,29 @@ box-sizing: border-box;
     justify-content: space-between;
 }
 
-.ivy_todoitem i{
-    color: rgb(209, 116, 116);
-    cursor: pointer;
+.ivy_todoitem:last-child{
+    border-bottom: none;
 }
 
-.ivy_todoitem i:hover{
+.ivy_todoitem .fa-trash-can{
+    color: rgb(209, 116, 116);
+    cursor: pointer;
+    transition: all 0.13s ease-in-out;
+}
+
+.ivy_todoitem .fa-trash-can:hover{
     color: rgb(255, 0, 0);
+}
+
+.ivy_todoitem .fa-check{
+    color: rgb(133, 209, 116);
+    cursor: pointer;
+    transition: all 0.13s ease-in-out;
+    margin-right: 1rem;
+}
+
+.ivy_todoitem .fa-check:hover{
+    color: rgb(26, 255, 0);
 }
 
 .ivy_todoitem i:active{
@@ -48,4 +71,46 @@ box-sizing: border-box;
 
 .done{
     text-decoration: line-through;
+    color: rgb(89, 188, 79);
+}
+
+.ivy_additem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    flex-grow: 1;
+}
+
+.ivy_additem input{
+    width: 100%;
+    height: 50px;
+    border: 3px solid black;
+    border-radius: 1rem;
+    background: none;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ivy_additem button{
+    width: 50%;
+    height: 50px;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 3px solid rgb(102, 80, 158) ;
+    border-radius: 1rem;
+    background: rgb(208, 160, 233);
+    text-align: center;
+    cursor: pointer;
+}
+
+.ivy_additem button:hover{
+    transform: scale(1.05);
+    transition: all 0.33s ease-in-out;
+}
+
+.ivy_additem button:active{
+    transform: scale(0.95);
 }
