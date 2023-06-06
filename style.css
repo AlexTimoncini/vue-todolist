@@ -6,6 +6,45 @@ padding: 0;
 box-sizing: border-box;
 }
 
+.ivy_navbar{
+    background-color: rgb(246, 194, 134);
+    height: 120px;
+}
+
+.ivy_main{
+    height: calc(100vh - 120px);
+    background-color: antiquewhite;
+    display: flex;
+}
+
+.ivy_todolist{
+    margin: 2rem auto;
+    list-style: none;
+    border: 3px solid black;
+    width: 60%;
+    border-radius: 2rem;
+}
+
+.ivy_todoitem{
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    border-bottom: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ivy_todoitem i{
+    color: rgb(209, 116, 116);
+    cursor: pointer;
+}
+
+.ivy_todoitem i:hover{
+    color: rgb(255, 0, 0);
+}
+
+.ivy_todoitem i:active{
+    transform: scale(0.95);
+}
 
 .done{
     text-decoration: line-through;

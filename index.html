@@ -19,6 +19,7 @@
             <ul class="ivy_todolist">
                 <li v-for="(item, index) in toDoList" class="ivy_todoitem">
                     <p :class="toDoList[index].done ? 'done' : ''"> {{ toDoList[index].toDo }}</p>
+                    <i class="fa-regular fa-trash-can" @click="deleteItem(index)"></i>
                 </li>
             </ul>
         </main>
